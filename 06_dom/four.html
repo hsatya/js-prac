@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Events</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+
+    <script>
+      function addLanguage(language) {
+        if (language !== undefined) {
+          const li = document.createElement("li");
+          li.innerHTML = language;
+          document.querySelector(".language").appendChild(li);
+        }
+      }
+
+      addLanguage("Python");
+      addLanguage("TypeScript");
+
+      function addOptiLanguage(language) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(language));
+        document.querySelector(".language").appendChild(li);
+      }
+
+      addOptiLanguage("Golang");
+      addOptiLanguage("Rust");
+
+      // Edit
+      const secondLang = document.querySelector("li:nth-child(2)");
+      //   secondLang.innerHTML = "CPP";
+      const newLi = document.createElement("li");
+      newLi.textContent = "CPP";
+      secondLang.replaceWith(newLi);
+
+      // edit
+      const firstLang = document.querySelector("li:first-child");
+      firstLang.outerHTML = "<li>TypeScript</li>";
+
+      // remove
+      const lastLang = document.querySelector("li:last-child");
+      lastLang.remove();
+    </script>
+  </body>
+</html>

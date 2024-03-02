@@ -1,0 +1,37 @@
+.canvas {
+  display: flex;
+  flex-direction: column;
+  /* background-color: white; */
+}
+
+.colors-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+#grey {
+  background-color: gray;
+}
+#white {
+  background-color: white;
+}
+#blue {
+  background-color: blue;
+}
+#yellow {
+  background-color: yellow;
+}
+
+.canvas h2 {
+  text-align: center;
+}
