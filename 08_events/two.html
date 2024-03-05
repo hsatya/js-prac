@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asynchronous</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h1>Asynchronous code</h1>
+    <button id="stop">Stop</button>
+
+    <script>
+      const sayHarshit = function () {
+        console.log("Harshit");
+      };
+
+      const changeText = function () {
+        document.querySelector("h1").innerHTML =
+          'Harshit Satya "Best Developer"';
+      };
+      const changeMe = setTimeout(changeText, 2000);
+
+      document.querySelector("#stop").addEventListener("click", () => {
+        clearTimeout(changeMe);
+        console.log("Stopped");
+      });
+
+      //   setInterval(function () {
+      //     console.log("Harshit");
+      //   }, 2000);
+    </script>
+  </body>
+</html>
